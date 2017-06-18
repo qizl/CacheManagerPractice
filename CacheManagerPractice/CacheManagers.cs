@@ -14,7 +14,10 @@ namespace CacheManagerPractice
                 if (customer == null)
                 {
                     customer = new CacheManagers();
-                    manager = CacheFactory.Build("firstCache", settings => { settings.WithSystemRuntimeCacheHandle("runtimeCache"); });
+                    manager = CacheFactory.Build("firstCache", settings =>
+                    {
+                        settings.WithSystemRuntimeCacheHandle("runtimeCache");
+                    });
                 }
 
                 return customer;
